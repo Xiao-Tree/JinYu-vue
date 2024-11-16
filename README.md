@@ -1,4 +1,10 @@
-# JinYu后台管理系统（前端）
+<h1 align="center">JinYu后台管理系统（前端）</h1>
+<p align="center">
+    <img src="https://img.shields.io/github/stars/Xiao-Tree/JinYu-vue?style=flat-square" />
+    <img src="https://img.shields.io/github/license/Xiao-Tree/JinYu-vue?style=flat" >
+    <img src="https://img.shields.io/github/issues/Xiao-Tree/JinYu-vue" />
+    <img src="https://img.shields.io/github/forks/Xiao-Tree/JinYu-vue?style=flat" />
+</p>
 
 一个采用当前主流前端技术栈的后台管理系统
 
@@ -14,7 +20,7 @@
 ## 代办事项
 
 - [ ] tab组件
-    - [ ] 右键标签菜单
+    - [ ] 右键菜单
     - [ ] 删除缓存
 - [ ] 防止重复请求
 - [x] 集成`ECharts`

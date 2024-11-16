@@ -66,7 +66,7 @@ onMounted(() => {
     renderer: "svg",
     loop,
     autoplay: mode === "loop",
-    path: `/src/assets/lottie/${icon}.json`, // the path to the animation json
+    path: `/lottie/${icon}.json`, // the path to the animation json
   });
   if (mode !== "loop") loader.setLoop(false);
 

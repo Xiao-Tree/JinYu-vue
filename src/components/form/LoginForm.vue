@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { fetchLogin } from "@/api/common";
 import { useUserStore } from "@/stores";
-import type { ModelUtil } from "@/types/common";
-import { error } from "echarts/types/src/util/log.js";
 import type { FormItemRule, FormRules } from "naive-ui";
 import { useTemplateRef } from "vue";
 import { useRouter } from "vue-router";

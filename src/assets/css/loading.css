@@ -1,6 +1,6 @@
 .loader-container {
   z-index: 1000;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -10,6 +10,16 @@
   height: 100vh;
   width: 100vw;
   background-color: #ff904f;
+
+  /* 元素原位置 */
+  transform: translateY(0);
+  /* 动画持续时间和缓动 */
+  transition: transform 0.8s ease;
+}
+
+.loader-container.hidden {
+  /* 平移到屏幕下方 */
+  transform: translateY(100%);
 }
 
 .loader {

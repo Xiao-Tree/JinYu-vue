@@ -126,8 +126,8 @@ const data = ref<data.dictType[] | undefined>([]),
               },
             },
             {
-              default: () => "编辑",
-              icon: () => h(SvgIcon, { icon: "mi:edit-alt" }),
+              default: () => "删除",
+              icon: () => h(SvgIcon, { icon: "mi:delete" }),
             }
           ),
         ]);

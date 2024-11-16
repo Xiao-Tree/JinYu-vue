@@ -2,7 +2,6 @@ import router from "@/router";
 import { useUserStore } from "@/stores";
 import { appMessage } from "@/utils/common";
 import { createFetch, type AfterFetchContext } from "@vueuse/core";
-import { useRouter } from "vue-router";
 
 export const useMyFetch = createFetch({
   baseUrl: import.meta.env.VITE_BASE_URL,
@@ -28,31 +27,33 @@ export const useMyFetch = createFetch({
       return { options };
     },
     afterFetch(ctx: AfterFetchContext) {
+      const msg = ctx.data.msg ?? "服务器出现错误";
       switch (ctx.data.code) {
         case 500:
-          appMessage.error(`服务端出现错误：${ctx.data.msg}`);
+          appMessage.error(msg);
           break;
         case 400:
-          appMessage.error(ctx.data.msg);
+          appMessage.error(msg);
       }
       return ctx;
     },
     onFetchError(ctx) {
+      const msg = ctx.data.msg;
       switch (ctx.response?.status) {
         case 401:
-          appMessage.error(ctx.data.msg ?? "登录凭证失效，请重新登录");
+          appMessage.error(msg ?? '登录凭证无效，请重新登录');
           if (router.currentRoute.value.name !== "login") {
             router.push("/login");
           }
           break;
         case 403:
-          appMessage.error(`禁止访问：${ctx.data.msg}`);
+          appMessage.error(msg ?? '禁止访问');
           break;
         case 500:
-          appMessage.error(`服务端出现错误：${ctx.data.msg}`);
+          appMessage.error(msg ?? '服务器出现错误');
           break;
         default:
-          appMessage.error(`${ctx.data.msg}`);
+          appMessage.error(msg ?? '未知错误');
       }
       return ctx;
     },

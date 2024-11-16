@@ -58,6 +58,9 @@ export default defineConfig(({ command, mode }) => {
         "@": fileURLToPath(new URL("./src", import.meta.url)),
       },
     },
+    preview:{
+      port: Number(env.VITE_PORT),
+    },
     server: {
       port: Number(env.VITE_PORT),
       open: true,
