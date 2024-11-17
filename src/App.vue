@@ -7,7 +7,6 @@ import {
   type GlobalThemeOverrides,
 } from "naive-ui";
 import { useAppStore } from "./stores";
-import AppProvider from "./components/AppProvider.vue";
 
 const appStore = useAppStore();
 

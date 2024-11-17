@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import ContextHolder from "./ContextHolder.vue";
 </script>
 <template>
   <NLoadingBarProvider>

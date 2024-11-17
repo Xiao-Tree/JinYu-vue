@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useModal } from 'naive-ui';
-
+import { useModal } from "naive-ui";
 
 if (!window.$message) {
   window.$loadingBar = useLoadingBar();
@@ -9,7 +8,6 @@ if (!window.$message) {
   window.$notification = useNotification();
   window.$modal = useModal();
 }
-
 </script>
 <template></template>
 <style></style>

@@ -8,9 +8,9 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     ActiveUser: typeof import('./../components/common/ActiveUser.vue')['default']
-    AppProvider: typeof import('./../components/AppProvider.vue')['default']
+    AppProvider: typeof import('./../components/common/AppProvider.vue')['default']
     BarChart: typeof import('./../components/echarts/BarChart.vue')['default']
-    ContextHolder: typeof import('./../components/ContextHolder.vue')['default']
+    ContextHolder: typeof import('./../components/common/ContextHolder.vue')['default']
     Dependencies: typeof import('./../components/Dependencies.vue')['default']
     DictForm: typeof import('./../components/form/DictForm.vue')['default']
     LineChart: typeof import('./../components/echarts/LineChart.vue')['default']
